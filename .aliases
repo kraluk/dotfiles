@@ -2,19 +2,13 @@
 alias grep='grep --color=auto'
 alias ls='ls -h --color=auto'
 
-# Ubuntu
-#alias install='sudo aptitude install'
-#alias remove='sudo aptitude purge'
-#alias search='aptitude search'
-#alias update-repos='sudo aptitude update'
-#alias update='sudo aptitude update && sudo aptitude safe-upgrade'
-
-# Arch
 alias install='yaourt -S'
 alias remove='yaourt -Rsn'
 alias search='pacman -Ss'
 alias ssearch='yaourt -Ss'
-alias update='yaourt -Syyu'
+#alias update='pacman -Syu'
+alias info='pacman -Si'
+alias update='yaourt -Syyua'
 
 alias ll='ls -lh'
 alias lla='ls -lah'
@@ -25,4 +19,9 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm --one-file-system -i'
 
+alias mount-jupiter='sshfs test@test.com:/home/lukasz /media/jupiter'
+alias unmount-jupiter='fusermount -u /media/jupiter'
+
 alias screen-off='xset dpms force off'
+
+alias master-thesis='cd ~/Studies/Praca\ magisterska/Text'
