@@ -6,8 +6,6 @@ alias install='yaourt -S'
 alias remove='yaourt -Rsn'
 alias search='pacman -Ss'
 alias ssearch='yaourt -Ss'
-#alias update='pacman -Syu'
-alias info='pacman -Si'
 alias update='yaourt -Syyua'
 
 alias ll='ls -lh'
@@ -19,9 +17,6 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm --one-file-system -i'
 
-alias mount-jupiter='sshfs test@test.com:/home/lukasz /media/jupiter'
-alias unmount-jupiter='fusermount -u /media/jupiter'
-
 alias screen-off='xset dpms force off'
 
-alias master-thesis='cd ~/Studies/Praca\ magisterska/Text'
+alias visualvm='visualvm --jdkhome /usr/lib/jvm/java-8-oracle'
