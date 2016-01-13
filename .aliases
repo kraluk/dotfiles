@@ -17,6 +17,9 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm --one-file-system -i'
 
+alias mount-domain='sshfs user@domain.com:/home/user /media/domain'
+alias unmount-domain='fusermount -u /media/domain'
+
 alias screen-off='xset dpms force off'
 
 alias visualvm='visualvm --jdkhome /usr/lib/jvm/java-8-oracle'
