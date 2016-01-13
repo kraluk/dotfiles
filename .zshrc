@@ -1,3 +1,6 @@
+# Start tmux
+if [ "$TMUX" = "" ]; then tmux new-session -A -s main; fi
+
 # Path to your oh-my-zsh installation.
 ZSH=/usr/share/oh-my-zsh/
 
@@ -45,7 +48,7 @@ COMPLETION_WAITING_DOTS="true"
 HISTFILE=~/.zhistory
 
 # Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
+#ZSH_CUSTOM=~/.zsh-custom
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -55,15 +58,20 @@ plugins=(git archlinux colored-man-pages colorize command-not-found web-search g
 
 # User configuration
 
+# Enables tmux on every zsh login
+zstyle ':omz:module:tmux' auto-start 'yes'
+
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 export EDITOR="vim"
 export VISUAL="vim"
+export BROWSER="chromium"
 
-#export JAVA_HOME=/usr/lib/jvm/java-8-jdk
-#export JAVA_FONTS=/usr/share/fonts/TTF
-#export M2_HOME=/opt/maven
-#export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true"
+# ssh-agent autostart
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
+export M2_HOME=/opt/maven
+export M2=$M2_HOME/bin
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
