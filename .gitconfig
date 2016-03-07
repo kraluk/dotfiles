@@ -2,4 +2,14 @@
 	name = 
 	email = 
 [push]
-	default = simple
+	default = matching
+[alias]
+    ci = commit
+    fa = fetch -a
+    fp = fetch -p
+[core]
+	autocrlf = auto
+[diff]
+	tool = vimdiff
+[merge]
+	tool = vimdiff
