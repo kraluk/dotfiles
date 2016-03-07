@@ -17,9 +17,16 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm --one-file-system -i'
 
-alias mount-domain='sshfs user@domain.com:/home/user /media/domain'
-alias unmount-domain='fusermount -u /media/domain'
+# Mount SSHFS
+alias mount-jupiter='sshfs user@host.com:/home/user /media/host'
+alias unmount-jupiter='fusermount -u /media/host'
 
+# Screen off
 alias screen-off='xset dpms force off'
 
+# VisualVM
 alias visualvm='visualvm --jdkhome /usr/lib/jvm/java-8-oracle'
+
+# Big files & directories
+alias big-dirs='find . -type d -print0 | xargs -0 du | sort -n | tail -10 | cut -f2 | xargs -I{} du -sh {}'
+alias big-files='find . -type f -print0 | xargs -0 du | sort -n | tail -10 | cut -f2 | xargs -I{} du -sh {}'
