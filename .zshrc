@@ -8,7 +8,8 @@ ZSH=/usr/share/oh-my-zsh/
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="gallifrey"
+#ZSH_THEME="gallifrey"
+ZSH_THEME="gitster"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -48,7 +49,7 @@ COMPLETION_WAITING_DOTS="true"
 HISTFILE=~/.zhistory
 
 # Would you like to use another custom folder than $ZSH/custom?
-#ZSH_CUSTOM=~/.zsh-custom
+ZSH_CUSTOM=~/.zsh-custom
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -73,8 +74,11 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export M2_HOME=/opt/maven
 export M2=$M2_HOME/bin
 
+# Enable 256 color mode
+export TERM=xterm-256color
+
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_IE.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
