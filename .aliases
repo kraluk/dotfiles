@@ -1,12 +1,21 @@
-# Aliases
+## Aliases
+###########
+
 alias grep='grep --color=auto'
 alias ls='ls -h --color=auto'
 
-alias install='yaourt -S'
-alias remove='yaourt -Rsn'
-alias search='pacman -Ss'
-alias ssearch='yaourt -Ss'
-alias update='yaourt -Syyua'
+# Old yaourt/pacman's aliases
+#alias install='yaourt -S'
+#alias remove='yaourt -Rsn'
+#alias search='pacman -Ss'
+#alias ssearch='yaourt -Ss'
+#alias update='yaourt -Syyua'
+
+# Aptitude
+alias install='sudo aptitude install'
+alias remove='sudo aptitude purge'
+alias search='aptitude search'
+alias update='sudo aptitude update && sudo aptitude upgrade'
 
 alias ll='ls -lh'
 alias lla='ls -lah'
