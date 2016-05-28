@@ -1,8 +1,17 @@
 # Start tmux
 if [ "$TMUX" = "" ]; then tmux new-session -A -s main; fi
 
+# Start ssh-agent
+#if ! pgrep -u $USER ssh-agent > /dev/null; then
+#    ssh-agent > ~/.ssh-agent-thing
+#fi
+#if [[ "$SSH_AGENT_PID" == "" ]]; then
+#    eval $(<~/.ssh-agent-thing)
+#fi
+#ssh-add -l >/dev/null || alias ssh='ssh-add -l >/dev/null || ssh-add && unalias ssh; ssh'
+
 # Path to your oh-my-zsh installation.
-ZSH=/usr/share/oh-my-zsh/
+ZSH=/home/lukasz/.oh-my-zsh/
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -19,7 +28,7 @@ ZSH_THEME="gitster"
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="false"
 
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
@@ -34,7 +43,7 @@ DISABLE_AUTO_UPDATE="true"
 ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="false"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -55,7 +64,7 @@ ZSH_CUSTOM=~/.zsh-custom
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git archlinux colored-man-pages colorize command-not-found web-search gradle mvn scala nyan)
+plugins=(git colored-man-pages colorize command-not-found web-search gradle mvn scala nyan)
 
 # User configuration
 
@@ -66,12 +75,14 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 export EDITOR="vim"
 export VISUAL="vim"
-export BROWSER="chromium"
+export BROWSER="chromium-browser"
 
 # ssh-agent autostart
-export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+# export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
-export M2_HOME=/opt/maven
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+
+export M2_HOME=/usr/share/maven
 export M2=$M2_HOME/bin
 
 # Enable 256 color mode
@@ -103,10 +114,13 @@ export LANG=en_IE.UTF-8
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 source $HOME/.aliases
+source $HOME/.aliases_remote
 
+# oh-my-zsh cache
 ZSH_CACHE_DIR=$HOME/.oh-my-zsh-cache
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
   mkdir $ZSH_CACHE_DIR
 fi
 
+# oh-my-zsh
 source $ZSH/oh-my-zsh.sh
