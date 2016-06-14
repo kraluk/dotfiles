@@ -1,15 +1,6 @@
 # Start tmux
 if [ "$TMUX" = "" ]; then tmux new-session -A -s main; fi
 
-# Start ssh-agent
-#if ! pgrep -u $USER ssh-agent > /dev/null; then
-#    ssh-agent > ~/.ssh-agent-thing
-#fi
-#if [[ "$SSH_AGENT_PID" == "" ]]; then
-#    eval $(<~/.ssh-agent-thing)
-#fi
-#ssh-add -l >/dev/null || alias ssh='ssh-add -l >/dev/null || ssh-add && unalias ssh; ssh'
-
 # Path to your oh-my-zsh installation.
 ZSH=/home/lukasz/.oh-my-zsh/
 
@@ -17,7 +8,6 @@ ZSH=/home/lukasz/.oh-my-zsh/
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#ZSH_THEME="gallifrey"
 ZSH_THEME="gitster"
 
 # Uncomment the following line to use case-sensitive completion.
@@ -64,7 +54,7 @@ ZSH_CUSTOM=~/.zsh-custom
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colored-man-pages colorize command-not-found web-search gradle mvn scala nyan tmux docker archlinux)
+plugins=(archlinux docker git colored-man-pages colorize command-not-found gradle mvn)
 
 # User configuration
 
@@ -73,8 +63,8 @@ zstyle ':omz:module:tmux' auto-start 'yes'
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
-export EDITOR="vim"
-export VISUAL="vim"
+export EDITOR="nvim"
+export VISUAL="leafpad"
 export BROWSER="chromium"
 export TERMINAL="termite"
 
@@ -112,10 +102,6 @@ export QT_STYLE_OVERRIDE=GTK+
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 source $HOME/.aliases
 source $HOME/.aliases_remote
