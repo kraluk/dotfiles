@@ -2,14 +2,20 @@ set pastetoggle=<F2>
 
 set number
 
-" colors peaksea
-" colors Tomorrow-Night-Eighties
-
-"let g:solarized_termcolors=256
-
-syntax enable
+colorscheme base16-oceanicnext
 set background=dark
-colorscheme solarized
+
+let g:airline_powerline_fonts = 1
+
+"call plug#begin('~/.vim/plugged')
+"    Plug 'vim-airline/vim-airline'
+"    Plug 'vim-airline/vim-airline-themes'
+"call plug#end()
+
+set laststatus=2
+set ttimeoutlen=50
+
+let g:airline_theme='papercolor'
 
 " Switching between tabs
 map <F5> :w<CR>

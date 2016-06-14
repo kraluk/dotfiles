@@ -75,14 +75,15 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 export EDITOR="vim"
 export VISUAL="vim"
-export BROWSER="chromium-browser"
+export BROWSER="chromium"
+export TERMINAL="termite"
 
 # ssh-agent autostart
 # export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
 
-export M2_HOME=/usr/share/maven
+export M2_HOME=/opt/maven
 export M2=$M2_HOME/bin
 
 # Enable 256 color mode
@@ -90,6 +91,9 @@ export TERM=xterm-256color
 
 # You may need to manually set your language environment
 export LANG=en_IE.UTF-8
+
+# Enforce in Qt5 GTK+ style usage
+export QT_STYLE_OVERRIDE=GTK+
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then

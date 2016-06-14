@@ -5,56 +5,86 @@ Xft.hinting: 1
 Xft.antialias: 1
 Xft.rgba: rgb
 
-! Solarized colors
+! material from r/unixporn
 
-! Common
+urxvt.font:                xft:inconsolata for powerline:size=12
+urxvt.boldFont:            xft:inconsolata for powerline:size=12:bold
+urxvt.italicFont:          xft:inconsolata for powerline:size=12:italic
+urxvt.boldItalicFont:      xft:inconsolata for powerline:size=12:bold:italic
+!urxvt.letterSpace:         -1
 
-#define S_yellow        #b58900
-#define S_orange        #cb4b16
-#define S_red           #dc322f
-#define S_magenta       #d33682
-#define S_violet        #6c71c4
-#define S_blue          #268bd2
-#define S_cyan          #2aa198
-#define S_green         #859900
+#define base00 #263238 
+#define base01 #2E3D45 
+#define base02 #455B66
+#define base03 #567280
+#define base04 #799FB3
+#define base05 #93C2D9
+#define base06 #ADE4FF 
+#define base07 #FFFFFF 
+#define base08 #FF4081 // red
+#define base09 #FF7043 // orange
+#define base0A #FFA21A // yellow
+#define base0B #8BC34A // green
+#define base0C #00BCD4 // cyan
+#define base0D #2979FF // blue
+#define base0E #9C27B0 // purple
+#define base0F #7986CB // indigo
 
-! Dark
+*foreground:   base05
+*background:   [95]base00
+*cursorColor:  #FFCC00
 
-#define S_base03        #002b36
-#define S_base02        #073642
-#define S_base01        #586e75
-#define S_base00        #657b83
-#define S_base0         #839496
-#define S_base1         #93a1a1
-#define S_base2         #eee8d5
-#define S_base3         #fdf6e3
+*.color0:       base00
+*.color1:       base08
+*.color2:       base0B
+*.color3:       base0A
+*.color4:       base0D
+*.color5:       base0E
+*.color6:       base0C
+*.color7:       base05
+*.color8:       base03
+*.color9:       base08
+*.color10:      base0B
+*.color11:      base0A
+*.color12:      base0D
+*.color13:      base0E
+*.color14:      base0C
+*.color15:      base07
 
-! To only apply colors to your terminal, for example, prefix
-! the color assignment statement with its name. Example:
-!
-! URxvt*background:            S_base03
+urxvt.depth: 32
+urxvt.scrollBar: false
+urxvt.perl-ext-common: default,matcher,resize-font,keyboard-select,clipboard
+urxvt.url-launcher: /usr/bin/xdg-open
+urxvt.matcher.button: 1
+urxvt.matcher.rend.0: Uline
 
-*background:              S_base03
-*foreground:              S_base0
-*fading:                  40
-*fadeColor:               S_base03
-*cursorColor:             S_base1
-*pointerColorBackground:  S_base01
-*pointerColorForeground:  S_base1
+urxvt.resize-font.smaller: C-minus
+urxvt.resize-font.bigger: C-plus
+urxvt.resize-font.reset: C-equal
+urxvt.resize-font.show: C-question
 
-*color0:                  S_base02
-*color1:                  S_red
-*color2:                  S_green
-*color3:                  S_yellow
-*color4:                  S_blue
-*color5:                  S_magenta
-*color6:                  S_cyan
-*color7:                  S_base2
-*color9:                  S_orange
-*color8:                  S_base03
-*color10:                 S_base01
-*color11:                 S_base00
-*color12:                 S_base0
-*color13:                 S_violet
-*color14:                 S_base1
-*color15:                 S_base3
+urxvt.iso14755: false
+urxvt.iso14755_52: false
+
+urxvt.keysym.M-Escape: perl:keyboard-select:activate
+urxvt.keysym.C-Escape: command: \033[6 q
+
+rofi.width: 30
+rofi.opacity: 90
+rofi.lines: 5
+rofi.terminal: urxvt
+rofi.font: Corbert Bold 16
+rofi.color-enabled: true
+rofi.modi: run,window
+rofi.padding: 16
+rofi.bw: 5
+rofi.monitor: -1
+rofi.separator-style: none
+rofi.hide-scrollbar: true
+
+! State:          'bg'    'fg'    'bgalt' 'hlbg'  'hlfg'
+rofi.color-normal: base00, base0C, base00, base0C, base00
+rofi.color-urgent: base00, base08, base00, base08, base00
+rofi.color-active: base00, base0B, base00, base0B, base00 
+!                 'bg'    'border'
+rofi.color-window: base00, base0C

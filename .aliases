@@ -1,21 +1,11 @@
-## Aliases
-###########
-
+# Aliases
 alias grep='grep --color=auto'
 alias ls='ls -h --color=auto'
 
-# Old yaourt/pacman's aliases
-#alias install='yaourt -S'
-#alias remove='yaourt -Rsn'
-#alias search='pacman -Ss'
-#alias ssearch='yaourt -Ss'
-#alias update='yaourt -Syyua'
-
-# Aptitude
-alias install='sudo aptitude install'
-alias remove='sudo aptitude purge'
-alias search='aptitude search'
-alias update='sudo aptitude update && sudo aptitude upgrade'
+alias install='pacaur -S'
+alias remove='pacaur -Rsn'
+alias search='pacaur -Ss'
+alias update='pacaur -Syyu'
 
 alias ll='ls -lh'
 alias lla='ls -lah'
@@ -26,16 +16,11 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm --one-file-system -i'
 
-# Mount SSHFS
-alias mount-jupiter='sshfs user@host.com:/home/user /media/host'
-alias unmount-jupiter='fusermount -u /media/host'
-
-# Screen off
 alias screen-off='xset dpms force off'
 
-# VisualVM
 alias visualvm='visualvm --jdkhome /usr/lib/jvm/java-8-oracle'
 
-# Big files & directories
 alias big-dirs='find . -type d -print0 | xargs -0 du | sort -n | tail -10 | cut -f2 | xargs -I{} du -sh {}'
 alias big-files='find . -type f -print0 | xargs -0 du | sort -n | tail -10 | cut -f2 | xargs -I{} du -sh {}'
+
+alias spotify='spotify --force-device-scale-factor=1.0000001'
