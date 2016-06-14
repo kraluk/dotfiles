@@ -54,7 +54,7 @@ ZSH_CUSTOM=~/.zsh-custom
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(archlinux docker git colored-man-pages colorize command-not-found gradle mvn)
+plugins=(archlinux docker git colored-man-pages colorize command-not-found gradle mvn tmux)
 
 # User configuration
 
@@ -84,6 +84,10 @@ export LANG=en_IE.UTF-8
 
 # Enforce in Qt5 GTK+ style usage
 export QT_STYLE_OVERRIDE=GTK+
+
+# Custom key bindings
+bindkey "${terminfo[khome]}" beginning-of-line
+bindkey "${terminfo[kend]}" end-of-line
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
