@@ -1,4 +1,6 @@
 # Aliases
+alias vim='nvim'
+
 alias grep='grep --color=auto'
 alias ls='ls -h --color=auto'
 
