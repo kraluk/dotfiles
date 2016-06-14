@@ -64,7 +64,7 @@ ZSH_CUSTOM=~/.zsh-custom
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colored-man-pages colorize command-not-found web-search gradle mvn scala nyan)
+plugins=(git colored-man-pages colorize command-not-found web-search gradle mvn scala nyan tmux docker archlinux)
 
 # User configuration
 
