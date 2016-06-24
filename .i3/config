@@ -239,8 +239,8 @@ bindsym Print exec scrot 'screenshot_%F_%T.png' -e 'mv $f ~/Images/Screenshots/'
 bindsym Mod1+Print exec scrot -s 'Screenshot_%F_%T.png' -e 'mv $f ~/Images/Screenshots/'
 
 # rofi
-bindsym $mod+d exec rofi -show run  
 bindsym $mod+Tab exec rofi -show window 
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -i -dmenu -p "run:"'
 
 # Default Volume
 exec pactl set-sink-volume 1 40%
