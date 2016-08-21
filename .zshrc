@@ -63,7 +63,7 @@ zstyle ':omz:module:tmux' auto-start 'yes'
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
-export EDITOR="nvim"
+export EDITOR="vim"
 export VISUAL="leafpad"
 export BROWSER="chromium"
 export TERMINAL="termite"
@@ -84,6 +84,9 @@ export LANG=en_IE.UTF-8
 
 # Enforce in Qt5 GTK+ style usage
 export QT_STYLE_OVERRIDE=GTK+
+
+# To run #cores + 1 compiling jobs concurrently
+export MAKEFLAGS="-j$(expr $(nproc) \+ 1)"
 
 # Custom key bindings
 bindkey "${terminfo[khome]}" beginning-of-line
