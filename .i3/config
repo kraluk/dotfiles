@@ -140,7 +140,7 @@ workspace $workspace10 output eDP1
 exec i3-msg "workspace $workspace1"
 
 # Cycle workspace between monitors
-bindsym $mod+Mod1+Tab exec ~/.i3/cycle-workspace.py
+bindsym $mod+Shift+Tab exec ~/.i3/cycle-workspace.py
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -243,7 +243,10 @@ bindsym $mod+Tab exec rofi -show window
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -i -dmenu -p "run:"'
 
 # Default Volume
-exec pactl set-sink-volume 1 40%
+exec pactl set-sink-volume 1 35%
+
+# Redshift autostart
+exec redshift
 
 # volume controls
 bindsym XF86AudioRaiseVolume exec amixer -q sset Master 5%+ # increase sound volume
@@ -260,9 +263,6 @@ bindsym Mod1+Left exec playerctl previous
 
 # Default brightness
 exec xbacklight = 60
-
-# redshift
-#exec redshift -l 51.50:-0.12 -b 1:0.6
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
