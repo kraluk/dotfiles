@@ -42,7 +42,7 @@ colorscheme base16-oceanicnext
 " {{{ Airline Powerline configuration
 
 let g:airline_powerline_fonts = 1
-let g:airline_theme='papercolor'
+let g:airline_theme='base16'
 
 " }}}
 
@@ -66,7 +66,10 @@ call plug#begin('~/.vim/plugged')
 	Plug 'leshill/vim-json'
 	Plug 'vim-latex/vim-latex'
 	Plug 'juleswang/css.vim'
-	Plug 'docker/docker'	
+	Plug 'docker/docker'
+    Plug 'Chiel92/vim-autoformat'
+
+    Plug 'mhartington/oceanic-next'
 
 call plug#end()
 
@@ -83,6 +86,9 @@ set pastetoggle=<F2>
 map <F5> :w<CR>
 map <F7> :tabnext<CR>
 map <F8> :tabprevious<CR>
+
+" Autoformat
+map <F3> :Autoformat<CR>
 
 " }}}
 
