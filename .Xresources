@@ -69,22 +69,21 @@ urxvt.iso14755_52: false
 urxvt.keysym.M-Escape: perl:keyboard-select:activate
 urxvt.keysym.C-Escape: command: \033[6 q
 
-rofi.width: 30
-rofi.opacity: 90
-rofi.lines: 5
-rofi.terminal: urxvt
-rofi.font: Corbert Bold 16
-rofi.color-enabled: true
-rofi.modi: run,window
-rofi.padding: 16
-rofi.bw: 5
-rofi.monitor: -1
-rofi.separator-style: none
-rofi.hide-scrollbar: true
-
-! State:          'bg'    'fg'    'bgalt' 'hlbg'  'hlfg'
-rofi.color-normal: base00, base0C, base00, base0C, base00
-rofi.color-urgent: base00, base08, base00, base08, base00
-rofi.color-active: base00, base0B, base00, base0B, base00 
-!                 'bg'    'border'
-rofi.color-window: base00, base0C
+! rofi configuration
+rofi.font:				Cantarell 15
+rofi.location:          0
+rofi.color-enabled:     true
+rofi.color-window:      argb:B3000000, argb:B3000000, argb:E6ffffff
+rofi.color-normal:      argb:00000000, argb:90FFFFFF, argb:00000000, argb:00000000, argb:FFFFFFFF 
+!ffe1a3ee
+rofi.color-urgent:      argb:00282a2e, argb:90FFFFFF, argb:00282a2e, argb:00000000, argb:ffcc6666
+rofi.color-active:      argb:00282a2e, argb:90FFFFFF, argb:00282a2e, argb:00000000, argb:ff81a2be
+rofi.separator-style:   solid
+rofi.fullscreen:        true
+rofi.padding:           220
+rofi.hide-scrollbar:    true
+rofi.line-margin:       4
+rofi.yoffset:           0
+rofi.xoffset:           0
+rofi.width:             100
+rofi.lines:             12
