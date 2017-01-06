@@ -19,8 +19,8 @@ set $workspace10 "10:"
 # color variables
 set $COLOR_BLACK #263238
 set $COLOR_WHITE #FFFFFF
-set $COLOR_PINK #FF4081
-set $COLOR_BLUE #00BCD4
+set $COLOR_PINK  #4084d6
+set $COLOR_BLUE  #00BCD4
 set $COLOR_GREEN #8BC34A
 
 # set CapsLock as escape 
@@ -148,7 +148,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # lockscreen
-set $Locker ~/.i3/i3lock-extra.sh && sleep 1
+set $Locker i3lock-fancy
 
 # Bind i3lock to the key shortcut
 bindsym $mod+shift+x exec $Locker
@@ -194,8 +194,8 @@ mode "resize"
 
 bindsym $mod+r mode "resize"
 
-# Window colors                                 border            background      text          indicator
-client.focused                 $COLOR_BLUE      $COLOR_BLUE       $COLOR_BLACK    $COLOR_BLACK
+# Window colors                border           background        text            indicator
+client.focused                 $COLOR_WHITE     $COLOR_WHITE      $COLOR_BLACK    $COLOR_BLACK
 client.unfocused               $COLOR_BLACK     $COLOR_BLACK      $COLOR_BLUE     $COLOR_BLUE
 client.focused_inactive        $COLOR_BLACK     $COLOR_BLACK      $COLOR_BLUE     $COLOR_BLUE
 client.urgent                  $COLOR_PINK      $COLOR_PINK       $COLOR_BLACK    $COLOR_BLACK 
@@ -229,7 +229,8 @@ for_window [title="^vvp$"] floating enable
 
 # default workspaces
 for_window [title="Spotify"] move container to workspace $workspace10
-for_window [title="qBittorrent"] move container to workspace $workspace9
+for_window [title="IntelliJ IDEA"] move container to workspace $workspace3
+for_window [title="Transmission"] move container to workspace $workspace9
 
 # key-bindings
 bindsym $mod+Shift+f exec chromium
@@ -286,5 +287,5 @@ exec --no-startup-id compton --opengl --sw-opti -f -D35 -I0.2 -O0.2
 # i3-gaps
 gaps inner 10
 gaps outer 0  
-for_window [class="^.*"] border pixel 5
+for_window [class="^.*"] border pixel 2
 smart_borders yes
