@@ -1,0 +1,8 @@
+#!/bin/bash
+
+time=`date "+%Y-%m-%d %H:%M"`
+
+case $BLOCK_BUTTON in
+    3) echo "$time" && gsimplecal ;;
+    *) echo "$time" ;;
+esac

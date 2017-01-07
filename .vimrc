@@ -65,13 +65,13 @@ set t_Co=256
 let base16colorspace=256
 
 syntax on
-colorscheme base16-ashes
+colorscheme base16-ocean
 
 " base-16 stuff
-if filereadable(expand("~/.vimrc_background"))
-    let base16colorspace=256
-    source ~/.vimrc_background
-endif
+"if filereadable(expand("~/.vimrc_background"))
+"    let base16colorspace=256
+"    source ~/.vimrc_background
+"endif
 
 " }}}
 
