@@ -121,21 +121,35 @@ bindsym $mod+Shift+0 move container to workspace $workspace10
 
 # Dual Monitors
 
-# set $External_Monitor ~/.screenlayout/external-monitor.sh
-# set $Internal_Monitor ~/.screenlayout/internal-monitor.sh
-# set $Dual_Monitor ~/.screenlayout/dual-monitors.sh
-# set $Clone_Monitors ~/.screenlayout/clone-monitors.sh
+set $External_Monitor ~/.screenlayout/external-monitor.sh
+set $Internal_Monitor ~/.screenlayout/internal-monitor.sh
+set $Dual_Monitor ~/.screenlayout/dual-monitors.sh
+set $Clone_Monitors ~/.screenlayout/clone-monitors.sh
 
-workspace $workspace1 output DP2 
-workspace $workspace2 output DP2 
-workspace $workspace3 output DP2
-workspace $workspace4 output DP2
-workspace $workspace5 output DP2
-workspace $workspace6 output eDP1
-workspace $workspace7 output eDP1
-workspace $workspace8 output eDP1
-workspace $workspace9 output eDP1
-workspace $workspace10 output eDP1
+set $mode_screen Screen (i) internal, (e) external, (d) dual, (c) clone
+mode "$mode_screen" {
+    bindsym i exec --no-startup-id $Internal_Monitor, mode "default"
+    bindsym e exec --no-startup-id $External_Monitor, mode "default"
+    bindsym d exec --no-startup-id $Dual_Monitor
+    bindsym c exec --no-startup-id $Clone_Monitors
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+F8 mode "$mode_screen"
+
+workspace $workspace1 output VGA1
+workspace $workspace2 output VGA1
+workspace $workspace3 output VGA1
+workspace $workspace4 output VGA1
+workspace $workspace5 output VGA1
+workspace $workspace6 output LVDS1
+workspace $workspace7 output LVDS1
+workspace $workspace8 output LVDS1
+workspace $workspace9 output LVDS1
+workspace $workspace10 output LVDS1
 
 exec i3-msg "workspace $workspace1"
 
@@ -263,7 +277,7 @@ bindsym Mod1+Right exec playerctl next
 bindsym Mod1+Left exec playerctl previous
 
 # Default brightness
-exec xbacklight = 60
+exec xbacklight = 40
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
