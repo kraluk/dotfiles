@@ -66,7 +66,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export EDITOR="vim"
 export VISUAL="mousepad"
 export BROWSER="google-chrome"
-export TERMINAL="xfce4-terminal"
+export TERMINAL="gnome-terminal"
 
 # ssh-agent autostart
 # export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
