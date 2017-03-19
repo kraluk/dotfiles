@@ -1,5 +1,5 @@
 # Start tmux
-if [ "$TMUX" = "" ]; then tmux new-session -A -s main; fi
+#if [ "$TMUX" = "" ]; then tmux new-session -A -s main; fi
 
 # Path to your oh-my-zsh installation.
 ZSH=/home/lukasz/.oh-my-zsh/
@@ -54,7 +54,7 @@ ZSH_CUSTOM=~/.zsh-custom
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(archlinux docker git colored-man-pages colorize command-not-found gradle mvn tmux)
+plugins=(debian docker git colored-man-pages colorize command-not-found gradle mvn tmux)
 
 # User configuration
 
@@ -64,16 +64,16 @@ zstyle ':omz:module:tmux' auto-start 'yes'
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 export EDITOR="vim"
-export VISUAL="leafpad"
-export BROWSER="chromium"
-export TERMINAL="termite"
+export VISUAL="mousepad"
+export BROWSER="google-chrome"
+export TERMINAL="xfce4-terminal"
 
 # ssh-agent autostart
 # export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 
-export M2_HOME=/opt/maven
+export M2_HOME=/usr/share/maven
 export M2=$M2_HOME/bin
 
 # Enable 256 color mode
@@ -104,6 +104,9 @@ bindkey "${terminfo[kend]}" end-of-line
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+# Keyboard layout
+setxkbmap pl
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh

@@ -7,8 +7,6 @@
     ci = commit
     fa = fetch -a
     fp = fetch -p
-[core]
-	autocrlf = auto
 [diff]
 	tool = vimdiff
 [merge]
