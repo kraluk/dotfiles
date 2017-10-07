@@ -1,7 +1,7 @@
 # custom IntelliJ IDEA VM options
 
--Xms128m
--Xmx750m
+-Xms2g
+-Xmx2g
 -XX:ReservedCodeCacheSize=240m
 -XX:+UseConcMarkSweepGC
 -XX:SoftRefLRUPolicyMSPerMB=50
@@ -10,4 +10,6 @@
 -Djava.net.preferIPv4Stack=true
 -XX:+HeapDumpOnOutOfMemoryError
 -XX:-OmitStackTraceInFastThrow
--Dawt.useSystemAAFontSettings=on
+-Dawt.useSystemAAFontSettings=lcd
+-Dsun.java2d.renderer=sun.java2d.marlin.MarlinRenderingEngine
+

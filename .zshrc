@@ -71,7 +71,7 @@ export TERMINAL="gnome-terminal"
 # ssh-agent autostart
 # export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+export JAVA_HOME=/usr/lib/jvm/default-java
 
 export M2_HOME=/usr/share/maven
 export M2=$M2_HOME/bin
@@ -83,7 +83,7 @@ export TERM=xterm-256color
 export LANG=en_IE.UTF-8
 
 # Enforce in Qt5 GTK+ style usage
-export QT_STYLE_OVERRIDE=GTK+
+export QT_STYLE_OVERRIDE=GTK
 
 # To run #cores + 1 compiling jobs concurrently
 export MAKEFLAGS="-j$(expr $(nproc) \+ 1)"
@@ -124,3 +124,11 @@ fi
 
 # oh-my-zsh
 source $ZSH/oh-my-zsh.sh
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/lukasz/.sdkman"
+[[ -s "/home/lukasz/.sdkman/bin/sdkman-init.sh" ]] && source "/home/lukasz/.sdkman/bin/sdkman-init.sh"
+
+# tabtab source for jhipster package
+# uninstall by removing these lines or running `tabtab uninstall jhipster`
+[[ -f /home/lukasz/.config/yarn/global/node_modules/generator-jhipster/node_modules/tabtab/.completions/jhipster.zsh ]] && . /home/lukasz/.config/yarn/global/node_modules/generator-jhipster/node_modules/tabtab/.completions/jhipster.zsh
