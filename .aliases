@@ -2,10 +2,11 @@
 alias grep='grep --color=auto'
 alias ls='ls -h --color=auto'
 
-alias install='sudo apt install'
-alias remove='sudo apt purge'
-alias search='apt search'
-alias update='sudo apt update && sudo apt upgrade && sudo apt autoremove'
+alias install='sudo dnf install'
+alias remove='sudo dnf remove'
+alias search='dnf search'
+alias update='sudo dnf upgrade'
+alias clean-packages='sudo dnf clean all && sudo dnf autoremove'
 
 alias ll='ls -lh'
 alias lla='ls -lah'
@@ -18,7 +19,7 @@ alias rm='rm --one-file-system -i'
 
 alias screen-off='xset dpms force off'
 
-alias visualvm='visualvm --jdkhome /usr/lib/jvm/default-java'
+alias visualvm='visualvm --jdkhome /usr/lib/jvm/java-1.8.0-openjdk-amd64'
 
 alias big-dirs='find . -type d -print0 | xargs -0 du | sort -n | tail -10 | cut -f2 | xargs -I{} du -sh {}'
 alias big-files='find . -type f -print0 | xargs -0 du | sort -n | tail -10 | cut -f2 | xargs -I{} du -sh {}'
