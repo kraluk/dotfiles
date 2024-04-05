@@ -18,7 +18,7 @@ brew install coreutils gawk gettext grep htop midnight-commander p7zip readline 
 brew install jq git docker docker-completion colima
 
 ## casks
-brew install itsycal keepassxc keepingyouawake mos rectangle textmate
+brew install itsycal keepassxc keepingyouawake mos rectangle textmate iterm2
 brew install font-fira-code
 brew install calibre libreoffice brunoobsidian visualvm
 
