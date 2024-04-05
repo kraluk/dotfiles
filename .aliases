@@ -1,13 +1,12 @@
 # Aliases
-alias grep='grep --color=auto'
-alias ls='ls -h --color=auto'
+alias install='brew install'
+alias remove='brew uninstall'
+alias search='brew search'
+alias update='brew upgrade && brew cu -a && sdk ug'
+alias brew-clean='brew cleanup --prune all -s && sdk flush archives && sdk flush temp'
 
-alias install='sudo dnf install'
-alias remove='sudo dnf remove'
-alias search='dnf search'
-alias update='sudo dnf upgrade'
-alias clean-packages='sudo dnf clean all && sudo dnf autoremove'
-
+alias grep='grep -G --color=auto'
+alias ls='ls -G -h'
 alias ll='ls -lh'
 alias lla='ls -lah'
 alias du='du -c -h'
@@ -15,11 +14,13 @@ alias df='df -h'
 
 alias cp='cp -i'
 alias mv='mv -i'
-alias rm='rm --one-file-system -i'
-
-alias screen-off='xset dpms force off'
-
-alias visualvm='visualvm --jdkhome /usr/lib/jvm/java-1.8.0-openjdk-amd64'
+alias rm='rm -i'
 
 alias big-dirs='find . -type d -print0 | xargs -0 du | sort -n | tail -10 | cut -f2 | xargs -I{} du -sh {}'
 alias big-files='find . -type f -print0 | xargs -0 du | sort -n | tail -10 | cut -f2 | xargs -I{} du -sh {}'
+
+alias docker-stop='docker stop $(docker ps -a -q)'
+alias docker-clear='docker rm -vf $(docker ps -a -q)'
+alias docker-clear-images='docker rmi -f $(docker images -a -q)'
+
+alias git-gc='git gc --prune=now --aggressive'

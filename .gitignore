@@ -1,1 +1,5 @@
-.aliases_remote
+# User specific
+.aliases_custom
+
+# Ignore Idea project-specific directory
+.idea

@@ -1,13 +1,7 @@
 [user]
 	name = 
-	email = 
-[push]
-	default = matching
+	email =
 [alias]
-    ci = commit
+    co = commit
     fa = fetch -a
     fp = fetch -p
-[diff]
-	tool = vimdiff
-[merge]
-	tool = vimdiff
