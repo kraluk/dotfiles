@@ -12,15 +12,16 @@ sh -c "$(curl -s https://get.sdkman.io)"
 # homebrew packages
 ## core tools
 brew install coreutils gawk gettext grep htop midnight-commander p7zip readline \
-  rsync tree wget xz zsh zsh-completions vim gnu-getopt gnu-indent gnu-sed gnu-tar
+  rsync tree wget xz zsh zsh-completions vim gnu-getopt gnu-indent gnu-sed gnu-tar \
+  rlwrap jq trash
 
 ## development tools
-brew install jq git docker docker-completion colima
+brew install git docker docker-completion colima k9s helm kubernetes-cli
 
 ## casks
-brew install itsycal keepassxc keepingyouawake mos rectangle textmate iterm2
-brew install font-fira-code
-brew install calibre libreoffice brunoobsidian visualvm
+brew install itsycal keepassxc keepingyouawake mos rectangle textmate iterm2 the-unarchiver
+brew install font-fira-code font-jetbrains-mono
+brew install calibre libreoffice bruno obsidian visualvm vlc drawio
 
 # sdkman
 sdk i java 21.0.2-tem
