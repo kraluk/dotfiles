@@ -120,6 +120,9 @@ source $HOME/.aliases_custom
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+export HOMEBREW_NO_ENV_HINTS='true'
+export DOCKER_HOST="unix://$HOME/.colima/docker.sock"
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
